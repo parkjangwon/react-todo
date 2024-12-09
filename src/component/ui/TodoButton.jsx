@@ -1,15 +1,15 @@
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
 function TodoButton({ text }) {
-    return (
-        <>
-            <button>{text}</button>
-        </>
-    )
+  return (
+    <>
+      <button>{text}</button>
+    </>
+  )
 }
 
 TodoButton.propTypes = {
-    text: PropTypes.string.isRequired,
-};
+  text: PropTypes.string.isRequired,
+}
 
 export default TodoButton
