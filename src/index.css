@@ -30,6 +30,26 @@ body {
   min-height: 100vh;
 }
 
+body.light {
+  color-scheme: light;
+  color: #242424;
+  background-color: #ffffff;
+}
+
+body.dark {
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+body.light button {
+  background-color: #f9f9f9;
+}
+
+body.dark button {
+  background-color: #1a1a1a;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
