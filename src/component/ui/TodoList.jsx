@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import TodoCreate from './TodoCreate.jsx'
 import TodoButton from './TodoButton.jsx'
+import { getRandomEmoji } from '../../utils/emojiUtils.js'
 
 function TodoList() {
   const [list, setList] = useState([])
@@ -26,12 +27,6 @@ function TodoList() {
       ...checkedTodo,
       [index]: !checkedTodo[index],
     })
-  }
-
-  const emojis = ['🐶', '🐱', '🐰', '🐼', '🐵', '🐴', '😘', '🥹', '🚀', '🗿']
-
-  const getRandomEmoji = () => {
-    return emojis[Math.floor(Math.random() * emojis.length)]
   }
 
   return (

@@ -1,13 +1,11 @@
 import { useEffect } from 'react'
+import { toggleTheme } from '../../utils/themeUtils.js'
 
 function TodoHeader() {
   useEffect(() => {
     document.body.classList.add('light')
   }, [])
-  const toggleTheme = () => {
-    document.body.classList.toggle('dark')
-    document.body.classList.toggle('light')
-  }
+
   return (
     <>
       <div>
