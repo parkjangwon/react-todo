@@ -16,9 +16,9 @@ function TodoList() {
     newList.splice(index, 1)
     setList(newList)
 
-    const newCheckedItems = { ...checkedTodo }
-    delete newCheckedItems[index]
-    setCheckedTodo(newCheckedItems)
+    const newCheckedTodos = { ...checkedTodo }
+    delete newCheckedTodos[index]
+    setCheckedTodo(newCheckedTodos)
   }
 
   const handleCheckedChange = index => {
@@ -28,6 +28,12 @@ function TodoList() {
     })
   }
 
+  const emojis = ['🐶', '🐱', '🐰', '🐼', '🐵', '🐴', '😘', '🥹', '🚀', '🗿']
+
+  const getRandomEmoji = () => {
+    return emojis[Math.floor(Math.random() * emojis.length)]
+  }
+
   return (
     <>
       <div>
@@ -35,6 +41,7 @@ function TodoList() {
           {list.map((todo, index) => (
             <li key={index}>
               <label>
+                {getRandomEmoji()}
                 <input
                   type='checkbox'
                   checked={!!checkedTodo[index]}
