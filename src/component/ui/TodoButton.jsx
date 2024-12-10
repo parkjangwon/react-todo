@@ -1,9 +1,7 @@
 import PropTypes from 'prop-types'
 
 function TodoButton({ text, onClick }) {
-  return (
-    <>{text === '삭제' ? <button onClick={onClick}>{text}</button> : <button>{text}</button>}</>
-  )
+  return <>{text === 'X' ? <button onClick={onClick}>{text}</button> : <button>{text}</button>}</>
 }
 
 TodoButton.propTypes = {

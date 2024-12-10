@@ -18,6 +18,7 @@ function TodoList() {
     setList(newList)
 
     const newCheckedTodos = { ...checkedTodo }
+
     delete newCheckedTodos[index]
     setCheckedTodo(newCheckedTodos)
   }
@@ -45,7 +46,7 @@ function TodoList() {
                 <span style={{ textDecoration: checkedTodo[index] ? 'line-through' : 'none' }}>
                   {todo}
                 </span>
-                <TodoButton text={'삭제'} onClick={() => handleDelete(index)} />
+                <TodoButton text={'X'} onClick={() => handleDelete(index)} />
               </label>
             </li>
           ))}
