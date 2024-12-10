@@ -1,14 +1,14 @@
-import TodoButton from './TodoButton.jsx'
 import { useState } from 'react'
+import TodoButton from './TodoButton.jsx'
 
 import PropTypes from 'prop-types'
 
-function TodoCreate({ addTodoItem }) {
+function TodoCreate({ addTodo }) {
   const [listName, setListName] = useState('')
   const handleSubmit = event => {
     event.preventDefault()
     if (listName.trim() !== '') {
-      addTodoItem(listName)
+      addTodo(listName)
       setListName('')
     }
   }
@@ -32,7 +32,7 @@ function TodoCreate({ addTodoItem }) {
 }
 
 TodoCreate.propTypes = {
-  addTodoItem: PropTypes.func.isRequired,
+  addTodo: PropTypes.func.isRequired,
 }
 
 export default TodoCreate
