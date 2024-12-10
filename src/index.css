@@ -64,7 +64,7 @@ button {
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 00;
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
@@ -83,10 +83,81 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
+  .list-item span {
+    color: #000000; /* 라이트 테마일 때 span의 글자 색을 검정색으로 설정 */
+  }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
+}
+
+@media (prefers-color-scheme: dark) {
+  .list-item span {
+    color: #ffffff; /* 다크 테마일 때 span의 글자 색을 흰색으로 설정 */
+  }
+}
+
+body.light .list-item span {
+  color: #000000; /* 라이트 테마일 때 span의 글자 색을 검정색으로 설정 */
+}
+
+body.dark .list-item span {
+  color: #ffffff; /* 다크 테마일 때 span의 글자 색을 흰색으로 설정 */
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.list-label {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  color: #a1a1aa; /* text-gray-400 */
+}
+
+.todo-button {
+  margin-left: auto; /* Pushes the button to the right end */
+}
+
+input[type='checkbox'] {
+  margin: 10px;
+  height: 1rem; /* h-4 */
+  width: 1rem; /* w-4 */
+  border-radius: 0.25rem;
+  border: 1px solid #d1d5db; /* border-gray-300 */
+  background: #f3f4f6; /* bg-gray-100 */
+  accent-color: #2563eb; /* text-blue-600 */
+}
+
+span {
+  text-decoration-line: line-through;
+  text-shadow: 0px 0px 1px #000;
+  font-weight: 600; /* Increase font weight for clarity */
+  -webkit-font-smoothing: antialiased; /* Improve font rendering on WebKit */
+}
+
+.create-todo {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.todo-input {
+  flex: 1;
+  margin-right: 10px; /* Optional: Adjust spacing as needed */
 }
