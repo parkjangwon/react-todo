@@ -15,6 +15,7 @@ function TodoCreate({ addTodo }) {
     if (listName.trim() !== '') {
       addTodo(listName)
       setListName('')
+      inputRef.current.focus()
     }
   }
 
