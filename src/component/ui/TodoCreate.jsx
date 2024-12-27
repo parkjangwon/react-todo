@@ -1,9 +1,14 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import TodoButton from './TodoButton.jsx'
 
 import PropTypes from 'prop-types'
 
 function TodoCreate({ addTodo }) {
+  const inputRef = useRef()
+  useEffect(() => {
+    inputRef.current.focus()
+  }, [])
+
   const [listName, setListName] = useState('')
   const handleSubmit = event => {
     event.preventDefault()
@@ -26,6 +31,7 @@ function TodoCreate({ addTodo }) {
             name={'listName'}
             placeholder={'할 일을 적어주세요.'}
             value={listName}
+            ref={inputRef}
             onChange={event => setListName(event.target.value)}
           />
           <TodoButton className='todo-button' text={'추가'} />
