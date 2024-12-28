@@ -4,12 +4,12 @@ import TodoButton from './TodoButton.jsx'
 import PropTypes from 'prop-types'
 
 function TodoCreate({ addTodo }) {
+  const [listName, setListName] = useState('')
   const inputRef = useRef()
   useEffect(() => {
     inputRef.current.focus()
   }, [])
-
-  const [listName, setListName] = useState('')
+  
   const handleSubmit = event => {
     event.preventDefault()
     if (listName.trim() !== '') {

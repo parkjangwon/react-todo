@@ -5,8 +5,7 @@ import { getRandomEmoji } from '../../utils/emojiUtils.js'
 
 function TodoList() {
   const [list, setList] = useState([])
-
-  const [checkedTodo, setCheckedTodo] = useState([]) // 체크 박스 상태 저장
+  const [checkedTodo, setCheckedTodo] = useState([])
 
   const addTodo = todo => {
     setList([...list, todo])
