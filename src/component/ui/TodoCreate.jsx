@@ -1,15 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 import TodoButton from './TodoButton.jsx'
 
-import PropTypes from 'prop-types'
-
 function TodoCreate({ addTodo }) {
   const [listName, setListName] = useState('')
   const inputRef = useRef()
   useEffect(() => {
     inputRef.current.focus()
   }, [])
-  
+
   const handleSubmit = event => {
     event.preventDefault()
     if (listName.trim() !== '') {
@@ -40,10 +38,6 @@ function TodoCreate({ addTodo }) {
       </form>
     </>
   )
-}
-
-TodoCreate.propTypes = {
-  addTodo: PropTypes.func.isRequired,
 }
 
 export default TodoCreate

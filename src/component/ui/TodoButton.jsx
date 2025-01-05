@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types'
-
 function TodoButton({ text, onClick }) {
   return (
     <>
@@ -12,11 +10,6 @@ function TodoButton({ text, onClick }) {
       )}
     </>
   )
-}
-
-TodoButton.propTypes = {
-  text: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
 }
 
 export default TodoButton
